@@ -1,0 +1,78 @@
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(20px, 5vw, 80px);
+  border-bottom: 1px solid transparent;
+  transition: all 0.4s;
+}
+
+.navbar--scrolled {
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom-color: #f0ddd9;
+  backdrop-filter: blur(16px);
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar__dot {
+  width: 7px;
+  height: 7px;
+  background: #c0392b;
+  border-radius: 50%;
+  animation: pulse 2.5s ease infinite;
+}
+
+.navbar__brand {
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  color: rgba(255,255,255,0.85);
+  transition: color 0.4s;
+}
+
+.navbar--scrolled .navbar__brand { color: #1a0a09; }
+
+.navbar__links {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.navbar__burger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  color: rgba(255,255,255,0.9);
+  transition: color 0.4s;
+}
+
+.navbar--scrolled .navbar__burger { color: #c0392b; }
+
+.mobile-menu {
+  position: fixed;
+  top: 68px; left: 0; right: 0;
+  background: #fff;
+  z-index: 199;
+  border-bottom: 1px solid #f0ddd9;
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.mobile-menu__link { font-size: 0.9rem !important; }
+
+@media (max-width: 900px) {
+  .navbar__links { display: none; }
+  .navbar__burger { display: block; }
+}

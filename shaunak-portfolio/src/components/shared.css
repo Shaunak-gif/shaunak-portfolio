@@ -1,0 +1,167 @@
+/* ─── Shared utility classes used across all components ─── */
+
+.mono { font-family: 'DM Mono', monospace; }
+
+/* Section layout */
+.section-pad { padding: 100px clamp(20px, 5vw, 80px); }
+.section-alt  { background: #fff8f7; }
+.container    { max-width: 1200px; margin: 0 auto; }
+
+/* Section typography */
+.section-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.66rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #c0392b;
+  margin-bottom: 14px;
+}
+
+.section-heading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.12;
+}
+
+.divider {
+  width: 48px;
+  height: 2px;
+  background: #c0392b;
+  margin: 22px 0 36px;
+}
+
+.text-red { color: #c0392b; font-style: italic; }
+
+/* Buttons */
+.btn-red {
+  background: #c0392b;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 14px 30px;
+  transition: all 0.3s;
+}
+.btn-red:hover {
+  background: #922b21;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(192,57,43,0.3);
+}
+.btn-red--sm { padding: 10px 22px; font-size: 0.67rem; }
+
+.btn-ghost {
+  background: transparent;
+  color: rgba(255,255,255,0.85);
+  border: 1px solid rgba(255,255,255,0.3);
+  cursor: pointer;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 13px 30px;
+  transition: all 0.3s;
+}
+.btn-ghost:hover {
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-2px);
+}
+
+/* Icon links */
+.ico-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; height: 40px;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.65);
+  text-decoration: none;
+  font-size: 0.68rem;
+  transition: all 0.3s;
+}
+.ico-link:hover {
+  background: #c0392b;
+  color: #fff;
+  border-color: #c0392b;
+  transform: translateY(-3px);
+}
+
+.ico-link-dark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px; height: 40px;
+  border: 1px solid #e8b4ae;
+  color: #922b21;
+  text-decoration: none;
+  font-size: 0.68rem;
+  transition: all 0.3s;
+  flex-shrink: 0;
+}
+.ico-link-dark:hover {
+  background: #c0392b;
+  color: #fff;
+  border-color: #c0392b;
+  transform: translateY(-3px);
+}
+
+/* Nav links */
+.nav-link {
+  position: relative;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 4px 0;
+  transition: color 0.3s;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 0; height: 1px;
+  background: #c0392b;
+  transition: width 0.3s;
+}
+.nav-link--dark { color: #1a0a09; }
+.nav-link--light { color: rgba(255,255,255,0.8); }
+.nav-link:hover { color: #c0392b; }
+.nav-link:hover::after { width: 100%; }
+
+/* Tags */
+.tag {
+  display: inline-block;
+  font-size: 0.64rem;
+  letter-spacing: 0.1em;
+  padding: 4px 12px;
+  border: 1px solid #e8b4ae;
+  color: #922b21;
+  margin: 3px 3px 0 0;
+  transition: all 0.2s;
+  cursor: default;
+}
+.tag:hover {
+  background: #c0392b;
+  color: #fff;
+  border-color: #c0392b;
+}
+
+/* Form inputs */
+.form-inp {
+  width: 100%;
+  border: 1px solid #e8b4ae;
+  padding: 14px 18px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  color: #1a0a09;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.3s;
+  resize: none;
+}
+.form-inp:focus { border-color: #c0392b; }
+.form-inp::placeholder { color: #c9a09a; font-style: italic; }

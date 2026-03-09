@@ -1,0 +1,24 @@
+.marquee-strip {
+  background: #c0392b;
+  padding: 13px 0;
+  overflow: hidden;
+}
+
+.marquee-track {
+  display: flex;
+  animation: marquee 20s linear infinite;
+  width: max-content;
+}
+
+.marquee-track:hover { animation-play-state: paused; }
+
+.marquee-row { display: flex; }
+
+.marquee-item {
+  font-size: 0.66rem;
+  letter-spacing: 0.18em;
+  color: rgba(255,255,255,0.82);
+  padding: 0 30px;
+  text-transform: uppercase;
+  border-right: 1px solid rgba(255,255,255,0.18);
+}
